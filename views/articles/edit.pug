@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    h1= title
+    form(action='/articles/' + article.id + '?_method=PUT', method='POST')
+        .form-group
+            label(for='title') title
+            input#title.form-control(type='text',value=article.title, name='title', placeholder='title')
+        .form-group
+            label(for='description') description
+            textarea#description.form-control(name='description')= article.description
+        .form-group
+            label(for='markdown') Markdown
+            textarea#markdown.form-control(name='markdown', rows='3')= article.markdown
+        a(href="/articles").btn.btn-secondary.mr-3 cancel
+        button(type="submit").btn.btn-success save

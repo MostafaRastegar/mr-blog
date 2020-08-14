@@ -1,0 +1,33 @@
+{
+  "name": "mr-blog",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "lint": "eslint \"./**/*.js\" --quiet",
+    "lintFull": "eslint \"./**/*.js\"",
+    "lintFix": "eslint --fix './**/*.js'"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "marked": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.28",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11",
+    "slugify": "^1.4.5"
+  }
+}

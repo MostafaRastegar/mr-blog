@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    h1= title
+    a.btn.btn-success(href="/articles/new") add new
+    each article in articles
+        .card.mt-4
+            .card-body
+                h2.card-title= article.title
+                div.card-subtitle.text-mute.mb-2= article.createdAt
+                p.cart-text.mb-2= article.description
+                a.btn.btn-primary(href='/articles/' + (article.slug || article.id)) read more
+

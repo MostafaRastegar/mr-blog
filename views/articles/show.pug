@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+    h1= title
+    div.text-mute.mb-3= article.createAt
+    a.btn.btn-secondary.mr-3(href="/articles") all Articles
+    a.btn.btn-primary.mr-3(href='/articles/edit/' + (article.slug || article.id)) edit
+    form.d-inline(action='/articles/' + article.id + '?_method=DELETE', method="post")
+        button.btn.btn-danger(type='submit') Delete
+    hr
+    p.mb-2.mt-3= article.description
